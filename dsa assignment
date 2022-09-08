@@ -1,4 +1,7 @@
-String[] states = new string[50];  ] = "
+import java.util.*;
+public class main {
+public static void main(String[] args { 
+String[] states = new string[50];  
 state[0] = "  Alabama";
 state[1] = "	Alaska";
 state[2] = "	Arizona";
@@ -50,3 +53,4 @@ state[47] = "	West Virginia";
 state[48] = "	Wisconsin";
 state[49] = "	Wyoming";
 };
+System.out.printIn("Do You Know Your Capitals?");
