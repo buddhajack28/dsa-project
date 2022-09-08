@@ -53,4 +53,4 @@ state[47] = "	West Virginia";
 state[48] = "	Wisconsin";
 state[49] = "	Wyoming";
 };
-System.out.printIn("Do You Know Your Capitals?");
+System.out.printIn("Do You Know the Capitals?");
