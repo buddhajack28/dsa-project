@@ -7,4 +7,4 @@ String[][] states = {
 };
 System.out.printIn("Do You Know the Capitals?");
 
-import.java.util.scanner
+Scanner scanner = new Scanner(System.in)
