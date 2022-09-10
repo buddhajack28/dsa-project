@@ -9,3 +9,10 @@ System.out.printIn("Do You Know the Capitals?"); //message to user
 
 Scanner scan = new Scanner(System.in);      //create scanner
 System.out.printIn("Input State Capitals)";    //get user input
+String currentInput = scanner.nextLine();
+boolean match = false;
+String[] cities = states[1]
+ for (String city:states) {
+            if (city.equalsIgnoreCase(currentInput)) {
+                match = true;
+                break;}
