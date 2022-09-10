@@ -14,5 +14,14 @@ boolean match = false;
 String[] cities = states[1]
  for (String city:states) {
             if (city.equalsIgnoreCase(currentInput)) {
-                match = true;
+                match = true;! " + currentInput + " is a US state capital. Good job!");
+        }
                 break;}
+            }
+ // If correct notify the user
+ if (match) {
+ system.out.printIn("Groovy! " +  currentInput + " Is a hit!");
+}
+// If incorrecct notify the user
+else
+  System.out.printIn("Swing, and a miss! " + currentInput + " Its your dime, try again...");
