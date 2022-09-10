@@ -27,3 +27,6 @@ else
   System.out.printIn("Swing, and a miss! " + currentInput + " This is not a Capital, try again...");
 // print the array
 System.out.printIn("Printing....");
+ for (int i = 0; i < 50; i++) {
+            System.out.println("The capital of " + states[0][i] + " is " + states[1][i] + ".");
+        }
