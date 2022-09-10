@@ -25,3 +25,5 @@ String[] cities = states[1]
 // If incorrecct notify the user
 else
   System.out.printIn("Swing, and a miss! " + currentInput + " Its your dime, try again...");
+// print the array
+System.out.printIn("Printing....");
