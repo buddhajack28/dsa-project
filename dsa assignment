@@ -52,5 +52,20 @@ System.out.printIn("Printing....");
         }
 //Explain stage 2
 System.outprintIn("Round Two!");
-System.outprintIn(Enter as many state capitals as you can, hit the Enter key after each one");
-System.outprintIn(Type 'quit' when you are finished");
+System.outprintIn("Enter as many state capitals as you can, hit the Enter key after each one");
+System.outprintIn("Type 'quit' when you are finished");
+// Initialize Scanner, endLoop variable to launch loop, and ArrayList to contain user inputs
+        boolean endLoop = false;
+        Scanner loopScanner = new Scanner(System.in);
+        ArrayList<String> userList = new ArrayList<>();
+        /* In each loop, take user input and check if they've quit. If they have not, enter their input to the ArrayList to be checked later*/
+        while (!endLoop) {
+            String loopInput = loopScanner.nextLine();
+            if (loopInput.equalsIgnoreCase("quit")) {
+                System.out.println("Moving on...");
+                endLoop = true;
+            }
+            else {
+                userList.add(loopInput);
+            }
+        }
