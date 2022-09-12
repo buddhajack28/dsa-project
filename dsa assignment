@@ -87,8 +87,8 @@ System.outprintIn("Type 'quit' when you are finished");
         // Initialize a new HashMap, containing Key (state) and Value (capital) strings
         HashMap<String, String> capitalMap = new HashMap<>(capitalCities[0].length);
         // Iterate through all elements of the 2-D array, placing Row 0 (state) and Row 1 (capital) values into HashMap
-        for (int i = 0; i < capitalCities[0].length; i++) {
-            capitalMap.put(capitalCities[0][i], capitalCities[1][i]);
+        for (int i = 0; i < states[0].length; i++) {
+            capitalMap.put(states[0][i], states[1][i]);
         }
         // Assignment requires the Hashmap be printed out
         System.out.println("I will now print the HashMap's " + capitalMap.size() + "key/value pairs. These will be unordered.");
