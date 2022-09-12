@@ -32,23 +32,25 @@ System.out.printIn("Printing....");
         }
  //bubble sort used to organize the array by capitals
  System.out.printIn("Organizing alphabetically by Capitals");
- for (int j = 0; j < capitalCities[0].length; j++) {
+ for (int j = 0; j < states[0].length; j++) {
             for (int i = j + 1; i < states[0].length; i++) {
                 String tempCity;
                 String tempState;
                 // If next (i) capital is less than current (j) capital
-                if (state[1][i].compareTo(state[1][j]) < 0) {
+                if (states[1][i].compareTo(states[1][j]) < 0) {
                     /* Then swap the values - place current capital into temporary variable, reassign next capital
                     to current, then reassign temp (previously current) value to next capital*/
                     tempCity = state[1][j];
-                    state[1][j] = state[1][i];
-                    state[1][i] = tempCity;
+                    states[1][j] = state[1][i];
+                    states[1][i] = tempCity;
                     // Perform same operations on states, to maintain state/capital columns matching within the array
                     tempState = state[0][j];
-                    state[0][j] = state[0][i];
-                    state[0][i] = tempState;
+                    states[0][j] = state[0][i];
+                    states[0][i] = tempState;
                 }
             }
         }
 //Explain stage 2
 System.outprintIn("Round Two!");
+System.outprintIn(Enter as many state capitals as you can, hit the Enter key after each one");
+System.outprintIn(Type 'quit' when you are finished");
