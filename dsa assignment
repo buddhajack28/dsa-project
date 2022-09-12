@@ -69,3 +69,57 @@ System.outprintIn("Type 'quit' when you are finished");
                 userList.add(loopInput);
             }
         }
+// Report number of answers provided by user
+        System.out.println("You submitted " + userList.size() + " answers! Let's see how many you got right!");
+        // Initialize counter for how many correct answers
+        int correctCounter = 0;
+        /* For each attempted answer, check the array of capitals to see if there is a match,
+        and increment correctCounter by 1 on each correct match */
+        for (String attempt : userList) {
+            for (String city : cities) {
+                if (attempt.equalsIgnoreCase(city))
+                    correctCounter += 1;
+            }
+        }
+        // Report number of correct answers to the user
+        System.out.println("Out of " + userList.size() + " attempts, you got " + correctCounter + " correct!");
+        System.out.println("Placing the arrays into a HashMap...");
+        // Initialize a new HashMap, containing Key (state) and Value (capital) strings
+        HashMap<String, String> capitalMap = new HashMap<>(capitalCities[0].length);
+        // Iterate through all elements of the 2-D array, placing Row 0 (state) and Row 1 (capital) values into HashMap
+        for (int i = 0; i < capitalCities[0].length; i++) {
+            capitalMap.put(capitalCities[0][i], capitalCities[1][i]);
+        }
+        // Assignment requires the Hashmap be printed out
+        System.out.println("I will now print the HashMap's " + capitalMap.size() + "key/value pairs. These will be unordered.");
+        // Iterate through all keys, to print the key and its corresponding value
+        for (String key : capitalMap.keySet()) {
+            System.out.println("The capital of " + key + " is " + capitalMap.get(key) + ".");
+        }
+        // Use the TreeMap class to sort the map while storing it in a binary tree
+        TreeMap<String, String> capitalsSorted = new TreeMap<>(capitalMap);
+        // Ask the user for a state and then give them the state's capital
+        System.out.println("Let's try something else!");
+        System.out.println("You enter a state, and I'll tell you the capital of that state.");
+        System.out.println("Enter the command 'quit' when you're done.");
+        // Initialize variable to start the loop
+        endLoop = false;
+        while (!endLoop) {
+            // Take user input, checking to see if the user has quit
+            System.out.println("Please enter a state: ");
+            String loopInput = loopScanner.nextLine();
+            if (loopInput.equalsIgnoreCase("quit")) {
+                System.out.println("Ending Program...");
+                endLoop = true;
+                continue;
+            }
+            // If the user does not quit, check if the input exists as a key in the TreeMap and provide associated value
+            if (capitalsSorted.containsKey(loopInput)) {
+                System.out.println("The capital of " + loopInput + " is " + capitalsSorted.get(loopInput) + ".");
+            }
+            else {
+                System.out.println("Sorry, I didn't recognize that state. Please try again, or type 'quit'.");
+            }
+        }
+    }
+}
