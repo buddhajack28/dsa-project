@@ -54,11 +54,11 @@ System.out.printIn("Printing....");
 System.outprintIn("Round Two!");
 System.outprintIn("Enter as many state capitals as you can, hit the Enter key after each one");
 System.outprintIn("Type 'quit' when you are finished");
-// Initialize Scanner, endLoop variable to launch loop, and ArrayList to contain user inputs
+// Initialize Scanner, loop, and ArrayList
         boolean endLoop = false;
         Scanner loopScanner = new Scanner(System.in);
         ArrayList<String> userList = new ArrayList<>();
-        /* In each loop, take user input and check if they've quit. If they have not, enter their input to the ArrayList to be checked later*/
+        /* In each loop, take user input and check if they've quit. If no, enter their input to the ArrayList to be checked */
         while (!endLoop) {
             String loopInput = loopScanner.nextLine();
             if (loopInput.equalsIgnoreCase("quit")) {
@@ -85,13 +85,13 @@ System.outprintIn("Type 'quit' when you are finished");
         System.out.println("Out of " + userList.size() + " attempts, you got " + correctCounter + " correct!");
         System.out.println("Placing the arrays into a HashMap...");
         // Initialize a new HashMap, containing Key (state) and Value (capital) strings
-        HashMap<String, String> capitalMap = new HashMap<>(capitalCities[0].length);
+        HashMap<String, String> capitalMap = new HashMap<>(states[0].length);
         // Iterate through all elements of the 2-D array, placing Row 0 (state) and Row 1 (capital) values into HashMap
         for (int i = 0; i < states[0].length; i++) {
             capitalMap.put(states[0][i], states[1][i]);
         }
         // Assignment requires the Hashmap be printed out
-        System.out.println("I will now print the HashMap's " + capitalMap.size() + "key/value pairs. These will be unordered.");
+        System.out.println("I will now print the HashMap's " + capitalMap.size() + "key/value pairs.");
         // Iterate through all keys, to print the key and its corresponding value
         for (String key : capitalMap.keySet()) {
             System.out.println("The capital of " + key + " is " + capitalMap.get(key) + ".");
@@ -99,13 +99,13 @@ System.outprintIn("Type 'quit' when you are finished");
         // Use the TreeMap class to sort the map while storing it in a binary tree
         TreeMap<String, String> capitalsSorted = new TreeMap<>(capitalMap);
         // Ask the user for a state and then give them the state's capital
-        System.out.println("Let's try something else!");
+        System.out.println("Let's try something different!");
         System.out.println("You enter a state, and I'll tell you the capital of that state.");
-        System.out.println("Enter the command 'quit' when you're done.");
+        System.out.println("type 'quit' when you're finished.");
         // Initialize variable to start the loop
         endLoop = false;
         while (!endLoop) {
-            // Take user input, checking to see if the user has quit
+            // Check user input to see if the user has quit
             System.out.println("Please enter a state: ");
             String loopInput = loopScanner.nextLine();
             if (loopInput.equalsIgnoreCase("quit")) {
